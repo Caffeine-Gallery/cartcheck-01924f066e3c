@@ -1,0 +1,12 @@
+type ShoppingItem = 
+ record {
+   completed: bool;
+   id: nat;
+   name: text;
+ };
+service : {
+  addItem: (text) -> (nat);
+  deleteItem: (nat) -> (bool);
+  getItems: () -> (vec ShoppingItem) query;
+  updateItem: (nat, bool) -> (bool);
+}
